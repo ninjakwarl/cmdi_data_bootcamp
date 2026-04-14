@@ -1,0 +1,40 @@
+2026-04-14 09:23:06 +08 FATAL:  password authentication failed for user "suface laptop 5"
+2026-04-14 09:23:06 +08 DETAIL:  Role "suface laptop 5" does not exist.
+	Connection matched file "C:/Program Files/PostgreSQL/17/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2026-04-14 09:28:40 +08 LOG:  checkpoint starting: time
+2026-04-14 09:28:46 +08 LOG:  checkpoint complete: wrote 50 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.379 s, sync=0.043 s, total=5.496 s; sync files=39, longest=0.006 s, average=0.002 s; distance=150 kB, estimate=3703 kB; lsn=0/1A55CB8, redo lsn=0/1A53A08
+2026-04-14 09:33:40 +08 LOG:  checkpoint starting: time
+2026-04-14 09:33:41 +08 LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.089 s, sync=0.023 s, total=1.144 s; sync files=9, longest=0.012 s, average=0.003 s; distance=46 kB, estimate=3337 kB; lsn=0/1A5F550, redo lsn=0/1A5F4F8
+2026-04-14 09:38:40 +08 LOG:  checkpoint starting: time
+2026-04-14 09:38:44 +08 LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.512 s, sync=0.028 s, total=3.554 s; sync files=31, longest=0.004 s, average=0.001 s; distance=128 kB, estimate=3016 kB; lsn=0/1A7F938, redo lsn=0/1A7F8E0
+2026-04-14 09:43:40 +08 LOG:  checkpoint starting: time
+2026-04-14 09:43:41 +08 LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.000 s, sync=0.020 s, total=1.061 s; sync files=9, longest=0.006 s, average=0.003 s; distance=0 kB, estimate=2715 kB; lsn=0/1A7FD00, redo lsn=0/1A7FCA8
+2026-04-14 09:53:40 +08 LOG:  checkpoint starting: time
+2026-04-14 09:53:40 +08 LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.111 s, sync=0.003 s, total=0.142 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=2443 kB; lsn=0/1A7FF78, redo lsn=0/1A7FF20
+2026-04-14 10:05:47 +08 ERROR:  syntax error at or near "where" at character 15
+2026-04-14 10:05:47 +08 STATEMENT:  select * from where course_id = 1;
+2026-04-14 11:08:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:08:41 +08 LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.669 s, sync=0.014 s, total=0.709 s; sync files=7, longest=0.005 s, average=0.002 s; distance=4 kB, estimate=2199 kB; lsn=0/1A81118, redo lsn=0/1A810C0
+2026-04-14 11:21:54 +08 ERROR:  syntax error at or near ";" at character 54
+2026-04-14 11:21:54 +08 STATEMENT:  insert into courses (course_name, department) values
+	;
+2026-04-14 11:23:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:23:40 +08 LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.345 s, sync=0.008 s, total=0.365 s; sync files=4, longest=0.004 s, average=0.002 s; distance=1 kB, estimate=1979 kB; lsn=0/1A815C8, redo lsn=0/1A81570
+2026-04-14 11:24:30 +08 ERROR:  check constraint "chk_course_name_letters" of relation "courses" is violated by some row
+2026-04-14 11:24:30 +08 STATEMENT:  alter table courses
+	add constraint chk_course_name_letters
+	check (course_name ~ '^[A-Za-z ]+$');
+2026-04-14 11:28:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:28:41 +08 LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.235 s, sync=0.023 s, total=1.279 s; sync files=12, longest=0.008 s, average=0.002 s; distance=45 kB, estimate=1786 kB; lsn=0/1A8CC60, redo lsn=0/1A8CC08
+2026-04-14 11:33:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:33:42 +08 LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.343 s, sync=0.020 s, total=1.387 s; sync files=13, longest=0.003 s, average=0.002 s; distance=47 kB, estimate=1612 kB; lsn=0/1A98BE8, redo lsn=0/1A98B90
+2026-04-14 11:36:37 +08 ERROR:  new row for relation "courses" violates check constraint "chk_course_name_letters"
+2026-04-14 11:36:37 +08 DETAIL:  Failing row contains (6, 1000, IT Department).
+2026-04-14 11:36:37 +08 STATEMENT:  insert into courses (course_name, department) values
+	(1000,'IT Department');
+2026-04-14 11:38:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:38:40 +08 LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.341 s, sync=0.010 s, total=0.367 s; sync files=4, longest=0.006 s, average=0.003 s; distance=0 kB, estimate=1451 kB; lsn=0/1A98DB8, redo lsn=0/1A98D60
+2026-04-14 11:53:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:53:41 +08 LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.648 s, sync=0.013 s, total=0.683 s; sync files=6, longest=0.008 s, average=0.003 s; distance=12 kB, estimate=1307 kB; lsn=0/1A9C160, redo lsn=0/1A9C108
+2026-04-14 11:58:40 +08 LOG:  checkpoint starting: time
+2026-04-14 11:58:40 +08 LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.227 s, sync=0.004 s, total=0.256 s; sync files=1, longest=0.004 s, average=0.004 s; distance=8 kB, estimate=1177 kB; lsn=0/1A9E290, redo lsn=0/1A9E238
