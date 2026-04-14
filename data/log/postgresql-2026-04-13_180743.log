@@ -1,0 +1,54 @@
+2026-04-13 18:07:43 +08 LOG:  database system was shut down at 2026-04-13 18:06:24 +08
+2026-04-14 08:28:37 +08 LOG:  checkpoint starting: time
+2026-04-14 08:28:40 +08 LOG:  checkpoint complete: wrote 18 buffers (0.1%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=2.063 s, sync=0.026 s, total=2.126 s; sync files=17, longest=0.003 s, average=0.002 s; distance=83 kB, estimate=83 kB; lsn=0/1E03FD8, redo lsn=0/1E03F80
+2026-04-14 09:16:05 +08 FATAL:  password authentication failed for user "postgre"
+2026-04-14 09:16:05 +08 DETAIL:  Role "postgre" does not exist.
+	Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2026-04-14 09:33:37 +08 LOG:  checkpoint starting: time
+2026-04-14 09:33:42 +08 LOG:  checkpoint complete: wrote 43 buffers (0.3%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=4.902 s, sync=0.050 s, total=4.976 s; sync files=39, longest=0.003 s, average=0.002 s; distance=161 kB, estimate=161 kB; lsn=0/1E2C618, redo lsn=0/1E2C5C0
+2026-04-14 09:37:39 +08 ERROR:  relation "courses" does not exist at character 13
+2026-04-14 09:37:39 +08 STATEMENT:  INSERT INTO courses (course_name, department)
+	VALUES
+	('Database Systems', 'IT Department'),
+	('Programming 1', 'CS Department'),
+	('Networking', 'IT Department');
+2026-04-14 09:38:37 +08 LOG:  checkpoint starting: time
+2026-04-14 09:38:41 +08 LOG:  checkpoint complete: wrote 38 buffers (0.2%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=4.338 s, sync=0.053 s, total=4.409 s; sync files=32, longest=0.012 s, average=0.002 s; distance=157 kB, estimate=161 kB; lsn=0/1E53C00, redo lsn=0/1E53BA8
+2026-04-14 09:43:37 +08 LOG:  checkpoint starting: time
+2026-04-14 09:43:37 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.117 s, sync=0.013 s, total=0.148 s; sync files=1, longest=0.013 s, average=0.013 s; distance=0 kB, estimate=145 kB; lsn=0/1E53E48, redo lsn=0/1E53DF0
+2026-04-14 09:49:53 +08 ERROR:  syntax error at or near ":" at character 22
+2026-04-14 09:49:53 +08 STATEMENT:  select * from courses:
+	select * from courses;
+2026-04-14 09:53:37 +08 LOG:  checkpoint starting: time
+2026-04-14 09:53:37 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.116 s, sync=0.006 s, total=0.139 s; sync files=2, longest=0.005 s, average=0.003 s; distance=0 kB, estimate=130 kB; lsn=0/1E540D8, redo lsn=0/1E54080
+2026-04-14 10:05:30 +08 ERROR:  syntax error at or near "Department" at character 70
+2026-04-14 10:05:30 +08 STATEMENT:  insert into courses (course_name, department) values (Networking, IT Department);
+2026-04-14 10:08:37 +08 LOG:  checkpoint starting: time
+2026-04-14 10:08:38 +08 LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.343 s, sync=0.011 s, total=0.372 s; sync files=4, longest=0.005 s, average=0.003 s; distance=0 kB, estimate=117 kB; lsn=0/1E544A0, redo lsn=0/1E54448
+2026-04-14 11:08:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:08:37 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.123 s, sync=0.010 s, total=0.182 s; sync files=1, longest=0.010 s, average=0.010 s; distance=1 kB, estimate=106 kB; lsn=0/1E54A08, redo lsn=0/1E549B0
+2026-04-14 11:22:05 +08 ERROR:  syntax error at or near ";" at character 54
+2026-04-14 11:22:05 +08 STATEMENT:  insert into courses (course_name, department) values
+	;
+2026-04-14 11:23:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:23:37 +08 LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.332 s, sync=0.025 s, total=0.405 s; sync files=4, longest=0.020 s, average=0.007 s; distance=1 kB, estimate=95 kB; lsn=0/1E54EB8, redo lsn=0/1E54E60
+2026-04-14 11:25:36 +08 ERROR:  check constraint "chk_course_name_letters" of relation "courses" is violated by some row
+2026-04-14 11:25:36 +08 STATEMENT:  alter table courses
+	add constraint chk_course_name_letters
+	check (course_name ~ '^[A-Za-z ]+$');
+2026-04-14 11:28:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:28:39 +08 LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.244 s, sync=0.035 s, total=1.330 s; sync files=11, longest=0.010 s, average=0.004 s; distance=44 kB, estimate=90 kB; lsn=0/1E5FF38, redo lsn=0/1E5FEE0
+2026-04-14 11:33:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:33:37 +08 LOG:  checkpoint complete: wrote 4 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.460 s, sync=0.027 s, total=0.538 s; sync files=5, longest=0.020 s, average=0.006 s; distance=7 kB, estimate=82 kB; lsn=0/1E61BB8, redo lsn=0/1E61B60
+2026-04-14 11:35:53 +08 ERROR:  new row for relation "courses" violates check constraint "chk_course_name_letters"
+2026-04-14 11:35:53 +08 DETAIL:  Failing row contains (6, 1000, IT Department).
+2026-04-14 11:35:53 +08 STATEMENT:  insert into courses(course_name, department) values
+	(1000, 'IT Department');
+2026-04-14 11:38:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:38:39 +08 LOG:  checkpoint complete: wrote 11 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.243 s, sync=0.030 s, total=1.303 s; sync files=12, longest=0.014 s, average=0.003 s; distance=45 kB, estimate=78 kB; lsn=0/1E6D268, redo lsn=0/1E6D210
+2026-04-14 11:48:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:48:37 +08 LOG:  checkpoint complete: wrote 4 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.468 s, sync=0.007 s, total=0.535 s; sync files=3, longest=0.004 s, average=0.003 s; distance=15 kB, estimate=72 kB; lsn=0/1E710D0, redo lsn=0/1E71078
+2026-04-14 11:53:37 +08 LOG:  checkpoint starting: time
+2026-04-14 11:53:39 +08 LOG:  checkpoint complete: wrote 15 buffers (0.1%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.718 s, sync=0.034 s, total=1.815 s; sync files=10, longest=0.017 s, average=0.004 s; distance=97 kB, estimate=97 kB; lsn=0/1E89778, redo lsn=0/1E89720
+2026-04-14 13:01:20 +08 LOG:  checkpoint starting: time
+2026-04-14 13:01:20 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.114 s, sync=0.004 s, total=0.178 s; sync files=1, longest=0.004 s, average=0.004 s; distance=7 kB, estimate=88 kB; lsn=0/1E8B5F0, redo lsn=0/1E8B598

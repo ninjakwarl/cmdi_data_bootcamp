@@ -1,0 +1,39 @@
+2026-04-14 15:57:06 +08 LOG:  database system was shut down at 2026-04-14 15:37:53 +08
+2026-04-14 15:58:14 +08 ERROR:  role "student1" already exists
+2026-04-14 15:58:14 +08 STATEMENT:  CREATE USER student1 WITH PASSWORD '@ccesspass11';
+2026-04-14 16:02:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:02:07 +08 LOG:  checkpoint complete: wrote 10 buffers (0.1%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.223 s, sync=0.047 s, total=1.342 s; sync files=10, longest=0.017 s, average=0.005 s; distance=9 kB, estimate=9 kB; lsn=0/1E8F758, redo lsn=0/1E8F700
+2026-04-14 16:03:16 +08 FATAL:  database "student2" does not exist
+2026-04-14 16:05:48 +08 FATAL:  password authentication failed for user "student1"
+2026-04-14 16:05:48 +08 DETAIL:  User "student1" has no password assigned.
+	Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2026-04-14 16:06:45 +08 ERROR:  syntax error at or near "current_user" at character 1
+2026-04-14 16:06:45 +08 STATEMENT:  current_user
+	psql current_user
+	select current_user;
+2026-04-14 16:07:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:07:06 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.111 s, sync=0.014 s, total=0.188 s; sync files=1, longest=0.014 s, average=0.014 s; distance=2 kB, estimate=8 kB; lsn=0/1E901E0, redo lsn=0/1E90188
+2026-04-14 16:10:48 +08 FATAL:  password authentication failed for user "postgres"
+2026-04-14 16:10:48 +08 DETAIL:  Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2026-04-14 16:12:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:12:07 +08 LOG:  checkpoint complete: wrote 5 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.541 s, sync=0.013 s, total=0.582 s; sync files=6, longest=0.004 s, average=0.003 s; distance=6 kB, estimate=8 kB; lsn=0/1E91CC0, redo lsn=0/1E91C68
+2026-04-14 16:17:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:17:06 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.115 s, sync=0.005 s, total=0.175 s; sync files=1, longest=0.005 s, average=0.005 s; distance=4 kB, estimate=7 kB; lsn=0/1E92DB0, redo lsn=0/1E92D58
+2026-04-14 16:17:43 +08 ERROR:  role "student1" cannot be dropped because some objects depend on it
+2026-04-14 16:17:43 +08 DETAIL:  privileges for database school_db
+2026-04-14 16:17:43 +08 STATEMENT:  drop user student1
+	;
+2026-04-14 16:17:46 +08 ERROR:  role "student1" cannot be dropped because some objects depend on it
+2026-04-14 16:17:46 +08 DETAIL:  privileges for database school_db
+2026-04-14 16:17:46 +08 STATEMENT:  drop user student1;
+2026-04-14 16:17:59 +08 ERROR:  role "student1" cannot be dropped because some objects depend on it
+2026-04-14 16:17:59 +08 DETAIL:  privileges for database school_db
+2026-04-14 16:17:59 +08 STATEMENT:  drop role student1;
+2026-04-14 16:21:05 +08 ERROR:  permission denied for table courses
+2026-04-14 16:21:05 +08 STATEMENT:  delete from courses where course_id = 3;
+2026-04-14 16:22:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:22:06 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.115 s, sync=0.012 s, total=0.149 s; sync files=1, longest=0.012 s, average=0.012 s; distance=0 kB, estimate=7 kB; lsn=0/1E93068, redo lsn=0/1E93010
+2026-04-14 16:27:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:27:06 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.105 s, sync=0.013 s, total=0.137 s; sync files=1, longest=0.013 s, average=0.013 s; distance=3 kB, estimate=6 kB; lsn=0/1E93F38, redo lsn=0/1E93EE0
+2026-04-14 16:32:06 +08 LOG:  checkpoint starting: time
+2026-04-14 16:32:08 +08 LOG:  checkpoint complete: wrote 13 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.481 s, sync=0.030 s, total=1.531 s; sync files=12, longest=0.013 s, average=0.003 s; distance=25 kB, estimate=25 kB; lsn=0/1E9A5E0, redo lsn=0/1E9A550

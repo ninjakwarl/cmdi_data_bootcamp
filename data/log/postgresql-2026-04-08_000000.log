@@ -1,0 +1,21 @@
+2026-04-13 14:27:22 +08 FATAL:  password authentication failed for user "postgres"
+2026-04-13 14:27:22 +08 DETAIL:  Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2026-04-13 14:27:22 +08 FATAL:  password authentication failed for user "postgres"
+2026-04-13 14:27:22 +08 DETAIL:  Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2026-04-13 14:27:29 +08 FATAL:  password authentication failed for user "postgres"
+2026-04-13 14:27:29 +08 DETAIL:  Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2026-04-13 14:27:30 +08 FATAL:  password authentication failed for user "postgres"
+2026-04-13 14:27:30 +08 DETAIL:  Connection matched file "C:/Program Files/PostgreSQL/18/data/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2026-04-13 15:21:32 +08 LOG:  checkpoint starting: time
+2026-04-13 15:23:25 +08 LOG:  checkpoint complete: wrote 1018 buffers (6.2%), wrote 1 SLRU buffers; 1 WAL file(s) added, 0 removed, 0 recycled; write=112.889 s, sync=0.400 s, total=113.445 s; sync files=333, longest=0.009 s, average=0.002 s; distance=4813 kB, estimate=4813 kB; lsn=0/1DBD9B0, redo lsn=0/1DBBD78
+2026-04-13 15:28:39 +08 ERROR:  syntax error at or near "." at character 17
+2026-04-13 15:28:39 +08 STATEMENT:  CREATE USER dave.asido WITH PASSWORD ''
+	CREATE USER dave.asido WITH PASSWORD '@ccesspass11'
+	CREATE ROLE student1
+	CREATE ROLE student1;
+2026-04-13 15:29:12 +08 ERROR:  syntax error at or near "clear" at character 1
+2026-04-13 15:29:12 +08 STATEMENT:  clear
+	CREATE ROLE student1
+	;
+2026-04-13 15:31:32 +08 LOG:  checkpoint starting: time
+2026-04-13 15:31:33 +08 LOG:  checkpoint complete: wrote 8 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.886 s, sync=0.028 s, total=0.956 s; sync files=8, longest=0.013 s, average=0.004 s; distance=10 kB, estimate=4333 kB; lsn=0/1DBE910, redo lsn=0/1DBE8B8

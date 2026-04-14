@@ -1,0 +1,12 @@
+2026-04-07 09:43:16 +08 LOG:  database system was shut down at 2026-04-07 09:43:02 +08
+2026-04-07 09:48:16 +08 LOG:  checkpoint starting: time
+2026-04-07 09:48:16 +08 LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.021 s, total=0.099 s; sync files=2, longest=0.011 s, average=0.010 s; distance=0 kB, estimate=0 kB; lsn=0/17F1760, redo lsn=0/17F1708
+2026-04-07 09:51:06 +08 ERROR:  schema "pgagent" does not exist
+2026-04-07 09:51:06 +08 STATEMENT:  SELECT has_schema_privilege('pgagent', 'USAGE')
+2026-04-07 09:53:16 +08 LOG:  checkpoint starting: time
+2026-04-07 09:53:34 +08 LOG:  checkpoint complete: wrote 153 buffers (0.9%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=17.135 s, sync=0.252 s, total=17.442 s; sync files=111, longest=0.018 s, average=0.003 s; distance=853 kB, estimate=853 kB; lsn=0/18C6F60, redo lsn=0/18C6ED0
+2026-04-07 09:54:34 +08 LOG:  shutting down
+2026-04-07 09:54:34 +08 ERROR:  canceling statement due to user request
+2026-04-07 09:54:34 +08 LOG:  checkpoint starting: shutdown immediate
+2026-04-07 09:54:34 +08 FATAL:  terminating connection due to administrator command
+2026-04-07 09:54:34 +08 PANIC:  concurrent write-ahead log activity while database system is shutting down

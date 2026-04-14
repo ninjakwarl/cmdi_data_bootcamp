@@ -1,0 +1,7 @@
+2026-04-07 10:09:51 +08 LOG:  database system was shut down at 2026-04-07 10:01:09 +08
+2026-04-07 10:14:51 +08 LOG:  checkpoint starting: time
+2026-04-07 10:14:52 +08 LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.132 s, sync=0.024 s, total=0.210 s; sync files=3, longest=0.012 s, average=0.008 s; distance=8 kB, estimate=8 kB; lsn=0/18FB0E0, redo lsn=0/18FB088
+2026-04-07 10:29:51 +08 LOG:  checkpoint starting: time
+2026-04-07 10:29:52 +08 LOG:  checkpoint complete: wrote 12 buffers (0.1%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.320 s, sync=0.014 s, total=1.370 s; sync files=11, longest=0.003 s, average=0.002 s; distance=53 kB, estimate=53 kB; lsn=0/19086F8, redo lsn=0/1908668
+2026-04-07 10:34:44 +08 LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
