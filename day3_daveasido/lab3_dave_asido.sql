@@ -33,7 +33,8 @@ GROUP BY d.dept_name;
 -- Show: “Employee - Department" 
 
 SELECT
-CONCAT(e.emp_name, '-' ,d.dept_name) AS employee_department
+CONCAT(e.emp_name, '-' ,d.dept_name) AS employee_department,
+e.salary
 FROM employees e
 LEFT JOIN departments d
 ON e.dept_id = d.dept_id;
