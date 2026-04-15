@@ -1,3 +1,5 @@
+Day 2 Handson
+
 Query 1
 
 SELECT
