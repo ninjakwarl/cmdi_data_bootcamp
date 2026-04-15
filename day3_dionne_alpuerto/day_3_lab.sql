@@ -57,7 +57,8 @@ Show:
 SELECT
 e.emp_name || ' - ' || d.dept_name AS employee_department
 FROM employees e
-JOIN departments d ON e.dept_id = d.dept_id;
+JOIN departments d ON e.dept_id = d.dept_id
+WHERE e.salary > 50000;
 
 
 PART 3: DML OPERATIONS
